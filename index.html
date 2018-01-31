@@ -15,10 +15,17 @@
 
 
     <link href="css/konten.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
 
   </head>
 
-  <body>
+  <body style="
+    background-image: url('images/bgimage.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: #464646;">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
@@ -46,6 +53,9 @@
         </div>
       </div>
     </nav>
+    <div id="wrapperHeader">
+
+  </div>
 
 
     <div class="container">
@@ -55,13 +65,16 @@
         <div class="col-lg-3">
           <h1 class="my-4"></h1>
           <div class="list-group">
+            <div class="hewan">
             <a href="#" class="list-group-item active">Hewan Purba</a>
+            </div>
+
             <a href="#" class="list-group-item">Tumbuhan Purba</a>
             <a href="#" class="list-group-item">Mikro Organisme Purba</a>
           </div>
         </div>
         <div class="col-lg-9">
-          <div class="card card-outline-secondary my-4">
+          <div class="card card-outline-secondary my-4" style="height: 350px;">
             <div class="card-header">
               Hewan Purba
             </div>
@@ -69,7 +82,7 @@
               <table>
                 <tr>
                   <td width="10px">-</td>
-                  <td>Dinosaurus</td>
+                  <td> <a href="Public/Dinosaurus.html">Dinosaurus</a> </td>
                 </tr>
                 <tr>
                   <td width="10px">-</td>
@@ -91,19 +104,23 @@
       </div>
 
     </div>
+    <div id="footer">
+			<p><marquee>Pra Magang UPT TIK</marquee></p>
+		</div>
+	</div>
 
 
 
-    <footer class="py-5 bg-dark">
-      <div class="container">
-      </div>
-
-    </footer>
 
 
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
+  <div id="footer" class="py-5 bg-dark">
+    <div class="footer">
+    </div>
+
+  </footer>
 
 </html>
