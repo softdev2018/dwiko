@@ -6,6 +6,12 @@
 
 body {
   padding-top: 54px;
+  background-image: url('../images/bgimage.jpg');
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: #464646;"
 }
 
 @media (min-width: 992px) {

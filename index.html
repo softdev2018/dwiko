@@ -12,20 +12,15 @@
 
 
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <link href="css/konten.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
 
   </head>
 
-  <body style="
-    background-image: url('images/bgimage.jpg');
-    background-repeat:no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    background-color: #464646;">
+  <body >
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
@@ -33,7 +28,9 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+
+
+        <div class="collapse navbar-collapse" id="navbarResponsive" >
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
               <a class="nav-link" href="#">Home
@@ -58,43 +55,82 @@
   </div>
 
 
-    <div class="container">
+    <div class="container" style="height:72vh;">
 
       <div class="row">
 
-        <div class="col-lg-3">
+        <div class="tab col-lg-3" style="height:72vh;">
           <h1 class="my-4"></h1>
           <div class="list-group">
-            <div class="hewan">
-            <a href="#" class="list-group-item active">Hewan Purba</a>
-            </div>
-
-            <a href="#" class="list-group-item">Tumbuhan Purba</a>
-            <a href="#" class="list-group-item">Mikro Organisme Purba</a>
+            <a href="#" id="row1" class="list-group-item active">Hewan Purba</a>
+            <a href="#" id="row2" class="list-group-item">Tumbuhan Purba</a>
+            <a href="#" id="row3" class="list-group-item">Mikro Organisme Purba</a>
           </div>
         </div>
-        <div class="col-lg-9">
-          <div class="card card-outline-secondary my-4" style="height: 350px;">
-            <div class="card-header">
-              Hewan Purba
-            </div>
-            <div class="card-body">
-              <table>
-                <tr>
-                  <td width="10px">-</td>
-                  <td> <a href="Public/Dinosaurus.html">Dinosaurus</a> </td>
-                </tr>
-                <tr>
-                  <td width="10px">-</td>
-                  <td>Ikan Purba</td>
-                </tr>
-                <tr>
-                  <td width="10px">-</td>
-                  <td>Mamalia Purba</td>
-                </tr>
-              </table>
+        <div class="col-lg-9"  id="list1">
+          <div  class="card card-outline-secondary my-4" >
+              <div class="card-header">
+                  Hewan Purba
 
-            </div>
+              </div>
+              <div class="card-body">
+                <table>
+                  <tr>
+                    <td width="10px">-</td>
+                    <td> <a href="Public/dinosaurus.html">Dinosaurus</a> </td>
+                  </tr>
+                  <tr>
+                    <td width="10px">-</td>
+                    <td><a href="Public/Ikan_purba.html">Ikan Purba</a></td>
+                  </tr>
+                  <tr>
+                    <td width="10px">-</td>
+                    <td>Mamalia Purba</td>
+                  </tr>
+                </table>
+
+              </div>
+
+          </div>
+
+
+        </div>
+        <div class="col-lg-9"  style="display:none;" id="list2">
+          <div  class="card card-outline-secondary my-4" >
+              <div class="card-header">
+                  Tumbuhan Purba
+
+              </div>
+              <div class="card-body">
+                <table>
+                  <tr>
+                    <td width="10px">-</td>
+                    <td> <a href="Public/Dinosaurus.html">Dinosaurus</a> </td>
+                  </tr>
+                </table>
+
+              </div>
+
+          </div>
+
+
+        </div>
+        <div class="col-lg-9"  style="display:none;" id="list3">
+          <div  class="card card-outline-secondary my-4" >
+              <div class="card-header">
+                  Mikro Organisme Purba
+
+              </div>
+              <div class="card-body">
+                <table>
+                  <tr>
+                    <td width="10px">-</td>
+                    <td> <a href="Public/Dinosaurus.html">Bakteri</a> </td>
+                  </tr>
+                </table>
+
+              </div>
+
           </div>
 
 
@@ -111,10 +147,36 @@
 
 
 
+  <script>
 
+  $(document).ready(function(){
+    $("#row1").click(function(){
+      $("#row2").removeClass("active");
+      $("#row3").removeClass("active");
+      $("#list2").hide();
+      $("#list3").hide();
+      $("#row1").addClass('active');
+      $("#list1").fadeIn();
+    });
+    $("#row2").click(function(){
+      $("#row1").removeClass("active");
+      $("#row3").removeClass("active");
+      $("#list1").hide();
+      $("#list3").hide();
+      $("#row2").addClass('active');
+      $("#list2").fadeIn();
+      });
+      $("#row3").click(function(){
+        $("#row1").removeClass("active");
+        $("#row2").removeClass("active");
+        $("#list1").hide();
+        $("#list2").hide();
+        $("#row3").addClass('active');
+        $("#list3").fadeIn();
+        });
+  });
+</script>
 
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
   <div id="footer" class="py-5 bg-dark">
