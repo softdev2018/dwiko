@@ -70,7 +70,7 @@
             <a href="#" id="row2" class="list-group-item">Tumbuhan Purba</a>
             <a href="#" id="row3" class="list-group-item">Mikro Organisme Purba</a>
           </div>
-          <button style="margin-left:38px; margin-top:20px" class="button_surprise">Surprise Me</button> 
+          <button style="margin-left:38px; margin-top:20px" class="button_surprise">Surprise Me</button>
         </div>
 
 
@@ -153,7 +153,14 @@
 			<p><marquee>Pra Magang UPT TIK</marquee></p>
 		</div>
 	</div>
-
+  <script type="text/Javascript">
+    var message="Eitss tidak boleh klik kanan";
+    function clickIE4(){if (event.button==2){alert(message);return false;}}
+    function clickNS4(e){if (document.layers||document.getElementById&&!document.all){if (e.which==2||e.which==3){alert(message);return false;}}}
+    if (document.layers){document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS4;}
+    else if (document.all&&!document.getElementById){document.onmousedown=clickIE4;}
+    document.oncontextmenu=new Function("alert(message);return false")
+    </script>
 
 
   <script>
